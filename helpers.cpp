@@ -32,14 +32,31 @@ using namespace std;
     @return - a new normalized two dimensional grid where the sum of 
     	   all probabilities is equal to one.
 */
-vector< vector<float> > normalize(vector< vector <float> > grid) {
 	
-	vector< vector<float> > newGrid;
 
-	// todo - your code here
+vector < vector <float> > normalize(vector < vector <float> > grid);
+	
+//function to normalize a 2D vector of floats
+vector < vector <float> > normalize(vector < vector <float> > grid) {
+
+	// declare a 2D vector with same size as grid
+	vector < vector <float> > newGrid (grid.size(), vector <float> (grid[0].size(), 0.0));
+
+for (int row = 0; row < grid.size(); row++) {
+        for (int column = 0; column < grid[0].size(); column++) {
+        	float total = total + grid[row][column];
+        }
+}
+    for (int row = 0; row < grid.size(); row++) {
+            for (int column = 0; column < grid[0].size(); column++) {
+                    newGrid[row][column] = grid[row][column]/total;
+
+            }
+        }
 
 	return newGrid;
 }
+
 
 /**
 	TODO - implement this function.
