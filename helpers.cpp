@@ -16,29 +16,29 @@
 #include <string>
 #include <fstream>
 #include "helpers.h"
-#include "debugging_helpers.cpp"
+// #include "debugging_helpers.cpp"
+
 using namespace std;
 
-//function to normalize a 2D vector of floats
-vector < vector <float> > normalize(vector < vector <float> > grid) {
+/**
+	TODO - implement this function
 
-	// declare a 2D vector with same size as grid
-	vector < vector <float> > newGrid (grid.size(), vector <float> (grid[0].size(), 0.0));
+    Normalizes a grid of numbers. 
 
-for (int row = 0; row < grid.size(); row++) {
-        for (int column = 0; column < grid[0].size(); column++) {
-        	float total = total + grid[row][column];
-    
-    for (int row = 0; row < grid.size(); row++) {
-            for (int column = 0; column < grid[0].size(); column++) {
-                    newGrid[row][column] = grid[row][column]/total;
-		            	cout << newGrid[row][column] << " ";
-		}
-		        cout << endl;
-            
-        }
-}
-}
+    @param grid - a two dimensional grid (vector of vectors of floats)
+		   where each entry represents the unnormalized probability 
+		   associated with that grid cell.
+
+    @return - a new normalized two dimensional grid where the sum of 
+    	   all probabilities is equal to one.
+*/
+vector< vector<float> > normalize(vector< vector <float> > grid) {
+	
+	vector< vector<float> > newGrid;
+
+	// todo - your code here
+
+	return newGrid;
 }
 
 /**
